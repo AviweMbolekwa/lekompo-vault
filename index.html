@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e9e6e0" />
+    <title>Lekompo Vault | Unmodern Dev</title>
+    <meta name="description" content="Walk through a 3D store: browse the clothing rail, sneaker wall, caps and bags, turn every product around and add it to your bag." />
+    <link rel="icon" type="image/svg+xml" href="/lekompo-vault/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,800&display=swap" rel="stylesheet" />
+    <!-- Splash styles are inline so the loader paints before any JS or 3D loads -->
+    <style>
+      html, body { background: #e9e6e0; margin: 0; }
+      #splash { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: #e9e6e0; color: #141414; font-family: Inter, Helvetica, Arial, sans-serif; transition: opacity .6s, visibility .6s; }
+      #splash.done { opacity: 0; visibility: hidden; }
+      .splash-mark { display: flex; flex-direction: column; align-items: center; }
+      .splash-logo { display: flex; align-items: center; gap: 10px; font-size: 34px; font-weight: 800; font-style: italic; letter-spacing: .04em; }
+      .splash-logo svg { width: 34px; height: 34px; }
+      .splash-sub { margin-top: 10px; font-size: 11px; font-weight: 500; letter-spacing: .32em; text-transform: uppercase; color: #5f5d58; }
+      .splash-bar { position: relative; overflow: hidden; width: 120px; height: 2px; margin-top: 28px; border-radius: 2px; background: #1414141a; }
+      .splash-bar span { position: absolute; inset: 0; width: 40%; border-radius: 2px; background: #141414; animation: splash-slide 1.1s ease-in-out infinite; }
+      @keyframes splash-slide { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
+    </style>
+    <script type="module" crossorigin src="/lekompo-vault/assets/main-BhY6_DHg.js"></script>
+    <link rel="modulepreload" crossorigin href="/lekompo-vault/assets/products-CXrkxSK4.js">
+    <link rel="stylesheet" crossorigin href="/lekompo-vault/assets/main-Cd-joIoI.css">
+  </head>
+  <body>
+    <div id="splash" aria-label="Loading the store">
+      <div class="splash-mark">
+        <div class="splash-logo">
+          Lekompo Vault
+        </div>
+        <div class="splash-sub">Virtual Store</div>
+        <div class="splash-bar"><span></span></div>
+      </div>
+    </div>
+    <div id="root"></div>
+  </body>
+</html>
